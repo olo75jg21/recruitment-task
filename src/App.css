@@ -1,42 +1,193 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.app-container {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 70rem;
+  margin-bottom: 1rem;
+}
+
+/* Title styling */
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Form row styling */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Individual form item styling */
+.form-row-item {
+  flex: 1;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Label styling */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Form input styling */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Textarea styling */
+textarea {
+  resize: none;
+  min-height: 3rem;
+  width: 100%;
+  height: 6rem;
+}
+
+/* Submit button styling */
+.submit-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 1rem;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Note card styling */
+.note-card {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  max-width: 70rem;
+}
+
+.note-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+.note-content {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+}
+
+.note-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-button,
+.delete-button {
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.edit-button {
+  background-color: #007bff;
+}
+
+.delete-button {
+  background-color: #e75050;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button:hover {
+  background-color: #7c3434;
+}
+
+@media (min-width: 1200px) {
+
+  .app-container,
+  .note-card {
+    max-width: 70rem;
+    min-width: 70rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 1199px) {
+
+  .app-container,
+  .note-card {
+    max-width: 48rem;
+    min-width: 48rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+
+  .app-container,
+  .note-card {
+    max-width: 25rem;
+    min-width: 25rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row-item {
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.no-data-card {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
 }
